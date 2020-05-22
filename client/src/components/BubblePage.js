@@ -6,7 +6,7 @@ import { axiosWithAuth } from "../utils/axiosWithAuth";
 import Bubbles from "./Bubbles";
 import ColorList from "./ColorList";
 
-const BubblePage = () => {
+const BubblePage = props => {
   const [colorList, setColorList] = useState([]);
   // fetch your colors data from the server when the component mounts
   // set that data to the colorList state property
@@ -20,22 +20,9 @@ const BubblePage = () => {
         )
       })
       .catch(err => console.log(err.response));
-    console.log("CL", colorList);
-  };
-
-  // formatData = () => {
-  //     const formattedData = [];
-  //     console.log("inFR", this.state.friends);
-  //     this.state.friends.forEach(friend => {
-  //         formattedData.push({
-  //             name: friend.name,
-  //             age: friend.age,
-  //             email: friend.email,
-
-  //         });
-  //     });
-  //     return formattedData;
-  // };
+    };
+    
+    console.log("CL", props);
   useEffect(() => {
     getData();
   }, []);

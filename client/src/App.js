@@ -16,9 +16,6 @@ function App() {
           <li>
             <Link to="/Bubbles">Bubbles</Link>
           </li>
-          {/* <li>
-            <Link to="/FriendForm">Form Page</Link>
-          </li> */}
         </ul>
         <Route exact path="/" component={Login} />
         <PrivateRoute exact path="/Bubbles" component={BubblePage} />
